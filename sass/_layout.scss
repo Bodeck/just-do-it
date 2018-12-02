@@ -1,0 +1,20 @@
+$selector: 'col';
+@for $i from 1 to 13 {
+    .#{$selector}-#{$i} {width: $i/12*100%;}    
+}
+@for $i from 1 to 12 {
+    .#{$selector}-offset-#{$i} {margin-left: $i/12*100%;}    
+}        
+
+[class*="#{$selector}-"] {
+    padding: 10px;
+    float: left;
+    text-align: center;
+}
+
+.row::before,
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
