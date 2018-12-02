@@ -1,0 +1,33 @@
+.ico {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    &-arrow-down-sm {background-image: url(/vendor/icons/arrow-down-small.svg);}
+    &-arrow-down {background-image: url(/vendor/icons/arrow-down.svg);}
+    &-arrow-left {background-image: url(/vendor/icons/arrow-left.svg);}
+    &-arrow-right {background-image: url(/vendor/icons/arrow-right.svg);}
+    &-arrow-up-sm {background-image: url(/vendor/icons/arrow-up-small.svg);}
+    &-arrow-up {background-image: url(/vendor/icons/arrow-up.svg);}
+    &-banners {background-image: url(/vendor/icons/banners.svg);}
+    &-calendar {background-image: url(/vendor/icons/calendar.svg);}
+    &-close {background-image: url(/vendor/icons/close.svg);}
+    &-details {background-image: url(/vendor/icons/details.svg);}
+    &-general {background-image: url(/vendor/icons/general.svg);}
+    &-links {background-image: url(/vendor/icons/links.svg);}
+    &-login {background-image: url(/vendor/icons/login.svg);}
+    &-message {background-image: url(/vendor/icons/message.svg);}
+    &-negative {background-image: url(/vendor/icons/negative.svg);}
+    &-notification {background-image: url(/vendor/icons/notification.svg);}
+    &-password {background-image: url(/vendor/icons/password.svg);}
+    &-payout {background-image: url(/vendor/icons/payout.svg);}
+    &-personal-data {background-image: url(/vendor/icons/personaldata.svg);}
+    &-positive {background-image: url(/vendor/icons/positive.svg);}
+    &-postback {background-image: url(/vendor/icons/postback.svg);}
+    &-profile {background-image: url(/vendor/icons/profile.svg);}
+    &-quit {background-image: url(/vendor/icons/quit.svg);}
+    &-refresh {background-image: url(/vendor/icons/refresh.svg);}
+    &-show {background-image: url(/vendor/icons/show.svg);}
+    &-trash {background-image: url(/vendor/icons/trash.svg);}
+    &-url {background-image: url(/vendor/icons/url.svg);}
+    &-wallet {background-image: url(/vendor/icons/wallet.svg);}
+}
