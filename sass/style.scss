@@ -2,6 +2,4 @@
 @import 'mixins';
 @import 'normalize';
 @import 'layout';
-@import './components/icons.scss';
-
-// @include grid("col");
+@import '/vendor/icons/icon-font/css/Glyphter.css'
