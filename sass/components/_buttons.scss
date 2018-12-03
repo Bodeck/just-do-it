@@ -1,0 +1,40 @@
+.btn {
+    border-radius: 3px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    margin: 5px;
+    padding: 14px 22px;
+    color: white;
+    cursor: pointer;
+    
+    &-default {
+        background-color: $btn-default-color;
+        &:hover {
+            background-color: $btn-default-hover-color;
+        }
+
+    }
+    &-orange {
+        background-color: $btn-action-color;
+        &:hover {
+            background-color: $btn-action-hover-color;
+        }
+    }
+
+    &[disabled]{
+        background-color: $btn-disabled-color;
+        cursor: not-allowed;
+        &::before {
+            content:'\004c';
+            display: inline-block;
+            font-family: 'Glyphter';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 0;
+            margin-right: 12px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
