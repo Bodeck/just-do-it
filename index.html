@@ -6,25 +6,40 @@
     <title>Just Do It</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
-    <script src="/js/script.js"></script>
+
 </head>
 <body>
     <header>
-        <nav class="top-menu"></nav>
+        <nav class="top-bar"></nav>
     </header>
-    <nav class="side-bar">
-        <ul>
-            <li><a href="#"><i class="icon-general"></i> General</a></li>
-            <li><a href="#"><i class="icon-details"></i> Details</a></li>
-            <li><a href="#"><i class="icon-links"></i> Links</a></li>
-            <li><a href="#"><i class="icon-banners"></i> Banners</a></li>
-            <li><a href="#"><i class="icon-personaldata"></i> Personal data</a></li>
-            <li><a href="#"><i class="icon-payout"></i> Payout</a></li>
-            <li><a href="#"><i class="icon-postback"></i> Postback</a></li>
+    <nav class="side-bar" id="side-bar">
+        <div class="nav-menu">
+            <img class="logo" src="/images/logo.png" alt="">
+            <span class="menu-toggle" id="menu-toggle"></span>
+        </div>
+        <ul class="nav-bar">
+            <li><a href="#"><i class="icon-general"></i> <span>General</span></a></li>
+            <li><a href="#"><i class="icon-details"></i> <span>Details</span></a></li>
+            <li><a href="#"><i class="icon-links"></i> <span>Links</span></a></li>
+            <li><a href="#"><i class="icon-banners"></i> <span>Banners</span></a></li>
+            <li><a href="#"><i class="icon-personaldata"></i> <span>Personal data</span></a></li>
+            <li><a href="#"><i class="icon-payout"></i> <span>Payout</span></a></li>
+            <li><a href="#"><i class="icon-postback"></i> <span>Postback</span></a></li>
         </ul>
+        <div class="your-manager">
+            <p>Your Manager</p>
+            <div class="badge">
+                <div class="manager-image">
+                    <span class="status"></span>
+                    <img src="/images/photo.png">
+                </div>
+                <span class="manager-name">Mikhael E.</span>
+            </div>
+        </div>
     </nav>
     <main>
         <section class="general"></section>
     </main>
+    <script src="/js/script.js"></script>
 </body>
 </html>
