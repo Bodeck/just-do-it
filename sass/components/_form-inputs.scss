@@ -1,14 +1,16 @@
 
-input, .form-input {
+.form-input {
     border-radius: 3px;
     color: #333333;
     border: 1px solid #e3e3e3;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     padding: 15px;
     text-align: left;
     outline: none;
-
+    &::placeholder {
+        color: #a6a6a6;
+    }
     &:hover, &:focus {
         border: 1px solid #b1b1b1;
     }
@@ -40,7 +42,7 @@ input, .form-input {
     }
 }
 
-    .input-icon {
+.input-icon {
         display: inline-block;
         font-size: 16px;
         transform: translate(30px);
@@ -51,3 +53,21 @@ input, .form-input {
             z-index: 0;
         }
     }
+.date-period {
+    @extend .form-input;
+    display: inline-block;
+    input {
+        border: none;
+        &:nth-child(2) {
+            border-left: #9c9c9c solid 1px;
+            padding-left: 14px;
+        }
+    }
+    .icon-calendar {
+        color: #9c9c9c;
+        cursor: pointer;
+        &:hover {
+            color: #333333; 
+        }
+    }
+}
