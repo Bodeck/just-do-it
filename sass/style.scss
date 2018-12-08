@@ -4,3 +4,9 @@
 @import 'normalize';
 @import 'layout';
 @import 'components/index';
+
+[class*='icon-']::before {
+    position: relative;
+    top: 2px;
+    line-height: 0;
+}
