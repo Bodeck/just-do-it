@@ -1,4 +1,30 @@
 $padding-left: 20px;
+@mixin short-menu {
+    min-width: 55px;
+    max-width: 55px;
+    .nav-menu a > span, .logo {
+        display: none
+    }
+    .nav-menu a > i{
+        margin-left: 0;
+    }
+    .menu-toggle {
+        display: inline-block;
+    }
+    .your-manager {
+        padding-left: 10px;
+        .title, .manager-name, {
+            display: none;
+        }
+        .manager-image {
+            width: 26px;
+            height: 26px;
+        }
+        .status {
+            @include circle(10px);
+        }
+    }
+}
 
 .side-bar {
     font-family: $default-font;
@@ -95,32 +121,14 @@ $padding-left: 20px;
     }
 
     &.short-menu {
-        min-width: 55px;
-        max-width: 55px;
-        .nav-menu a > span, .logo {
-            display: none
-        }
-        .nav-menu a > i{
-            margin-left: 0;
-        }
-        .menu-toggle {
-            display: inline-block;
-        }
-        .your-manager {
-            padding-left: 10px;
-            .title, .manager-name, {
-                display: none;
-            }
-            .manager-image {
-                width: 26px;
-                height: 26px;
-            }
-            .status {
-                @include circle(10px);
-            }
-        }
+        @include short-menu();
     }
-      
+    @media(max-width: 767px) {
+        &.mobile-default {
+            @include short-menu()
+        }
+      }
+    
 }
 
 

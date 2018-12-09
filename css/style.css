@@ -577,101 +577,101 @@ template {
 
 .side-bar {
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
   background-color: #191919;
   width: 10%;
   min-width: 188px;
   height: 100vh;
   font-size: 14px;
+  position: fixed;
 }
 
-.side-bar .nav-menu {
-  padding: 20px;
+.side-bar .nav-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 20px;
 }
 
-.side-bar .logo {
+.side-bar .nav-header .logo {
   display: inline-block;
 }
 
-.side-bar .menu-toggle {
+.side-bar .nav-header .menu-toggle {
   cursor: pointer;
-  display: block;
-  color: white;
+  display: inline-block;
 }
 
-.side-bar .menu-toggle::before {
+.side-bar .nav-header .menu-toggle::before {
   background-image: url(/images/hamburger.svg);
   background-size: cover;
+  content: '';
   display: inline-block;
   height: 16px;
-  width: 16px;
-  content: '';
+  width: 18px;
+  position: relative;
+  top: 3px;
 }
 
-.side-bar .nav-bar {
+.side-bar .nav-menu {
   list-style: none;
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
 }
 
-.side-bar .nav-bar a {
-  color: white;
+.side-bar .nav-menu li {
+  width: 100%;
+}
+
+.side-bar .nav-menu a {
+  color: #818181;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 0 10px 16px;
   display: block;
   border-left: 4px solid transparent;
 }
 
-.side-bar .nav-bar a i {
+.side-bar .nav-menu a i {
   margin-right: 14px;
 }
 
-.side-bar .nav-bar a:hover {
+.side-bar .nav-menu a:hover {
   border-left: 4px solid #f58220;
   background-color: #282828;
 }
 
-.side-bar.short-menu {
-  min-width: 55px;
-  width: 10px;
-}
-
-.side-bar.short-menu .nav-bar a > span, .side-bar.short-menu .logo {
-  display: none;
-}
-
-.side-bar.short-menu .menu-toggle {
-  display: inline-block;
-}
-
-.your-manager {
+.side-bar .your-manager {
   border-top: 1px solid #333333;
-  padding-left: 20px;
+  padding: 20px;
 }
 
-.your-manager p {
-  text-transform: uppercase;
-  line-height: 42px;
+.side-bar .your-manager .title {
+  color: #808080;
   font-weight: 500;
   letter-spacing: -0.28px;
-  color: #808080;
+  line-height: 42px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
-.your-manager .badge {
+.side-bar .your-manager .avatar {
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
-.your-manager .manager-image {
+.side-bar .your-manager .manager-image {
   display: inline-block;
   position: relative;
 }
 
-.your-manager .manager-image .status {
+.side-bar .your-manager .manager-image img {
+  width: 100%;
+}
+
+.side-bar .your-manager .manager-image .status {
   border-radius: 50%;
   height: 12px;
   width: 12px;
@@ -680,10 +680,77 @@ template {
   right: 0;
 }
 
-.your-manager .manager-name {
+.side-bar .your-manager .manager-name {
   color: #56819f;
   line-height: 40px;
   margin-left: 14px;
+}
+
+.side-bar.short-menu {
+  min-width: 55px;
+  max-width: 55px;
+}
+
+.side-bar.short-menu .nav-menu a > span, .side-bar.short-menu .logo {
+  display: none;
+}
+
+.side-bar.short-menu .nav-menu a > i {
+  margin-left: 0;
+}
+
+.side-bar.short-menu .menu-toggle {
+  display: inline-block;
+}
+
+.side-bar.short-menu .your-manager {
+  padding-left: 10px;
+}
+
+.side-bar.short-menu .your-manager .title, .side-bar.short-menu .your-manager .manager-name {
+  display: none;
+}
+
+.side-bar.short-menu .your-manager .manager-image {
+  width: 26px;
+  height: 26px;
+}
+
+.side-bar.short-menu .your-manager .status {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+@media (max-width: 767px) {
+  .side-bar.mobile-default {
+    min-width: 55px;
+    max-width: 55px;
+  }
+  .side-bar.mobile-default .nav-menu a > span, .side-bar.mobile-default .logo {
+    display: none;
+  }
+  .side-bar.mobile-default .nav-menu a > i {
+    margin-left: 0;
+  }
+  .side-bar.mobile-default .menu-toggle {
+    display: inline-block;
+  }
+  .side-bar.mobile-default .your-manager {
+    padding-left: 10px;
+  }
+  .side-bar.mobile-default .your-manager .title, .side-bar.mobile-default .your-manager .manager-name {
+    display: none;
+  }
+  .side-bar.mobile-default .your-manager .manager-image {
+    width: 26px;
+    height: 26px;
+  }
+  .side-bar.mobile-default .your-manager .status {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+  }
 }
 
 [class*='icon-']::before {
