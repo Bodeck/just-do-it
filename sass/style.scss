@@ -7,6 +7,10 @@
 @import 'components/index';
 @import 'sections/index';
 
+* {
+    font-family: $default-font;
+}
+
 [class*='icon-']::before {
     position: relative;
     top: 2px;

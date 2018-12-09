@@ -223,7 +223,7 @@ template { display: none; }
 
 .side-bar .nav-menu a i { margin-right: 14px; }
 
-.side-bar .nav-menu a:hover { border-left: 4px solid #f58220; background-color: #282828; }
+.side-bar .nav-menu a:hover { border-left: 4px solid #f58220; background-color: #282828; color: #ffffff; }
 
 .side-bar .your-manager { border-top: 1px solid #333333; padding: 20px; }
 
@@ -263,5 +263,25 @@ template { display: none; }
   .side-bar.mobile-default .your-manager .title, .side-bar.mobile-default .your-manager .manager-name { display: none; }
   .side-bar.mobile-default .your-manager .manager-image { width: 26px; height: 26px; }
   .side-bar.mobile-default .your-manager .status { border-radius: 50%; height: 10px; width: 10px; } }
+
+.top-bar { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; border-bottom: 1px solid #e3e3e3; position: fixed; width: 100%; background-color: #ffffff; }
+
+@media (max-width: 767px) { .top-bar { display: none; } }
+
+.nav-btn { background-color: #ffffff; color: #9c9c9c; border: none; cursor: pointer; padding: 20px; border-left: 1px solid #e3e3e3; }
+
+.nav-btn span { margin: 0 15px; }
+
+.nav-btn span.amount { font-size: 20px; font-weight: 400; }
+
+.nav-btn span.username { color: #56819f; font-size: 13px; }
+
+.nav-btn .notification { position: relative; display: block; }
+
+.nav-btn .indicator { border-radius: 50%; height: 9px; width: 9px; background-color: orange; display: inline-block; position: absolute; top: -2px; }
+
+.nav-btn:hover { background-color: #f5f5f2; }
+
+* { font-family: "Roboto", sans-serif; }
 
 [class*='icon-']::before { position: relative; top: 2px; line-height: 0; }
