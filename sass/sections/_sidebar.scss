@@ -1,43 +1,52 @@
+$padding-left: 20px;
+
 .side-bar {
     font-family: $default-font;
+    font-weight: 300;
     background-color: #191919;
     width: 10%;
     min-width: 188px;
     height: 100vh;
     font-size: 14px;
-    .nav-menu {
-        padding: 20px;
+    position: fixed;
+
+    .nav-header {
         display: flex;
         justify-content: space-around;
-    }
-    .logo {
-        display: inline-block;
-
-    }
-    .menu-toggle {
-        cursor: pointer;
-        display: block;
-        // float: right;
-        color: white;
-        &::before {
-            background-image: url(/images/hamburger.svg);
-            background-size: cover;
+        padding: 20px;
+        .logo {
             display: inline-block;
-            height: 16px;
-            width: 16px;
-            content: '';
+            
         }
+        .menu-toggle {
+            cursor: pointer;
+            display: inline-block;
+            &::before {
+                background-image: url(/images/hamburger.svg);
+                background-size: cover;
+                content: '';
+                display: inline-block;
+                height: 16px;
+                width: 18px;
+                position: relative;
+                top: 3px;
+            }
+        }
+        
     }
 
-    .nav-bar {
+    .nav-menu {
         list-style: none;
         margin: 0;
         padding: 0;
         padding-bottom: 20px;
+        li {
+            width: 100%;
+        }
         a {
-            color: white;
+            color: #818181;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 10px 0 10px 16px;
             display: block;
             border-left: 4px solid transparent;
             i {
@@ -49,47 +58,70 @@
             }
         }
     }
+    .your-manager {
+        border-top: 1px solid #333333;
+        padding: $padding-left;
+        .title {
+            color: #808080;
+            font-weight: 500;
+            letter-spacing: -0.28px;
+            line-height: 42px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .avatar {
+            display: flex;
+            cursor: pointer;
+        }
+        .manager-image {
+            display: inline-block;
+            position: relative;
+            img {
+                width: 100%;
+            }
+    
+            .status {
+                @include circle(12px);
+                background-color: #04ae00;
+                position: absolute;
+                right: 0;
+            }
+        }
+        .manager-name {
+            color: #56819f;
+            line-height: 40px;
+            margin-left: 14px;
+        }
+    }
 
     &.short-menu {
         min-width: 55px;
-        width: 10px;
-        .nav-bar a > span, .logo {
+        max-width: 55px;
+        .nav-menu a > span, .logo {
             display: none
         }
+        .nav-menu a > i{
+            margin-left: 0;
+        }
         .menu-toggle {
-            // float: left;
             display: inline-block;
         }
-    }
-}
-
-.your-manager {
-    border-top: 1px solid #333333;
-    padding-left: 20px;
-    p {
-        text-transform: uppercase;
-        line-height: 42px;
-        font-weight: 500;
-        letter-spacing: -0.28px;
-        color: #808080;
-    }
-    .badge {
-        display: flex;
-    }
-    .manager-image {
-        display: inline-block;
-        position: relative;
-        .status {
-            @include circle(12px);
-            background-color: #04ae00;
-            position: absolute;
-            right: 0;
+        .your-manager {
+            padding-left: 10px;
+            .title, .manager-name, {
+                display: none;
+            }
+            .manager-image {
+                width: 26px;
+                height: 26px;
+            }
+            .status {
+                @include circle(10px);
+            }
         }
     }
-    .manager-name {
-        color: #56819f;
-        line-height: 40px;
-        margin-left: 14px;
-    }
+      
 }
+
+
 
