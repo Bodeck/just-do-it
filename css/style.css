@@ -213,7 +213,7 @@ template { display: none; }
 
 .side-bar .nav-header .menu-toggle { cursor: pointer; display: inline-block; }
 
-.side-bar .nav-header .menu-toggle::before { background-image: url(/images/hamburger.svg); background-size: cover; content: ''; display: inline-block; height: 16px; width: 18px; position: relative; top: 3px; }
+.side-bar .nav-header .menu-toggle::before { background-image: url(../../images/hamburger.svg); background-size: cover; content: ''; display: inline-block; height: 16px; width: 18px; position: relative; top: 3px; }
 
 .side-bar .nav-menu { list-style: none; margin: 0; padding: 0; padding-bottom: 20px; }
 
