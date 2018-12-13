@@ -1,0 +1,38 @@
+main{
+    &.container{
+        margin-top: 64px + 18px;
+    }
+}
+
+section {
+    background-color: white;
+    width: 100%;
+    max-width: 1056px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 18px;
+    .page-header {
+        padding: 10px 18px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .page-title {
+        text-transform: uppercase;
+        color: #a6a6a6;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .page-content {
+        border-top: 1px solid #e3e3e3;
+        padding: 50px 200px;
+    }
+
+}
+
+.date-filters {
+    text-align: center;
+    padding: 33px;
+}
+.chart-area{
+    img {
+        width: 100%;
+    }
+}

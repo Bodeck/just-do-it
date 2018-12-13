@@ -11,8 +11,15 @@
     font-family: $default-font;
 }
 
+body {
+    background-color:#BABABA;
+    margin: 0;
+}
+
 [class*='icon-']::before {
     position: relative;
     top: 2px;
     line-height: 0;
 }
+
+//copy to section or page folder

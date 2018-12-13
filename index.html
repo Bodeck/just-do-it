@@ -19,7 +19,7 @@
                 <i class="icon-arrow-down"></i>
             </button>
             <button class="nav-btn btn-notification">
-                
+
                 <span class="notification">
                     <i class="icon-notification"></i>
                     <i class="indicator"></i>
@@ -34,7 +34,7 @@
             </button>
         </nav>
     </header>
-    <aside class="side-bar mobile-default" id="side-bar">
+    <nav class="side-bar mobile-default" id="side-bar">
         <div class="nav-header">
             <img class="logo" src="images/logo.png" alt="">
             <span class="menu-toggle" id="menu-toggle"></span>
@@ -58,9 +58,89 @@
                 <span class="manager-name">Mikhael E.</span>
             </div>
         </div>
-    </aside>
-    <main>
-        <section class="general">
+    </nav>
+    <main class="container">
+        <section class="section">
+            <header class="page-header">
+                <h3 class="page-title">General statistic</h3>
+            </header>
+            
+            <div class="date-filters">
+                    <div class="date-period">
+                            <input type="date" name="date-from" id="date-from">
+                            <input type="date" name="date-to" id="date-to">
+                            <span class="icon-calendar"></span>
+                        </div>
+                        <button class="btn btn-orange"><i class="icon-refresh"></i></button>
+            </div>
+            <div class="page-content">
+                <div class="chart-area">
+                    <img src="images/graph.png" alt="graph">
+                </div>
+            </div>
+        </section>
+        <section>
+            <header class="page-header">
+                <h3 class="page-title">Links</h3>
+            </header>
+            <div class="page-content">
+                <button class="btn btn-orange icon-positive"> add new</button>
+                <table class="container-fluid">
+                    <tbody>
+                        <tr class="row">
+                            <td class="col-md-5">Home page</td>
+                            <td class="col-md-5"><a href="http://www.homepage.com">http://www.homepage.com</a></td>
+                            <td class="col-md-1"><i class="icon-links"></i><i class="icon-trash"></i></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-md-5">Currently offer</td>
+                            <td class="col-md-5"><a href="http://www.currently.com">http://www.currently.com</a></td>
+                            <td class="col-md-2"></td>
+                        </tr>
+                        <tr class="row">
+                            <td>BlurPix</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Your site</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Google</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Facebook</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Dashboard</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Blurax</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Piece of wine</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row">
+                            <td>Twitter</td>
+                            <td><a href="http://www.com"></a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-orange icon-positive"> add new</button>
+            </div>
         </section>
     </main>
     <script src="js/script.js"></script>
