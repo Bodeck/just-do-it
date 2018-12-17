@@ -1,0 +1,46 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .7);
+    z-index: 1;
+    left: 0;
+    top: 0;
+    &.hidden {
+        display: none;
+    }
+    .popup-dialog {
+        width: 50%;
+        background-color: white;
+        margin: 60px auto;
+        .popup-header{
+            border-bottom: 1px solid #e3e3e3;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 14px;
+            /* Style for "Login" */
+            color: #a6a6a6;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            h4 {
+                margin:0;
+            }
+            .btn-close {
+                background-color: transparent;
+                border: none;
+                color: grey;
+                float: right;
+                font-size: 20px;
+            }
+        }
+        .popup-body {
+            padding: 47px;
+            display: flex;
+            justify-content: center;
+        }
+        .popup-footer{
+            text-align: center;
+        }
+    }
+}
