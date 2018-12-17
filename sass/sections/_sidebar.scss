@@ -1,5 +1,6 @@
 $padding-left: 20px;
-@mixin short-menu {
+
+@mixin menu-collapsed {
     min-width: 55px;
     max-width: 55px;
     .nav-menu a > span, .logo {
@@ -8,7 +9,7 @@ $padding-left: 20px;
     .nav-menu a > i{
         margin-left: 0;
     }
-    .menu-toggle {
+    .hamburger {
         display: inline-block;
     }
     .your-manager {
@@ -26,17 +27,15 @@ $padding-left: 20px;
     }
 }
 
-.side-bar {
-    font-family: $default-font;
-    font-weight: 300;
+@mixin menu-expanded {
     background-color: #191919;
-    width: 10%;
-    min-width: 188px;
-    height: 100%;
+    font-family: $default-font;
     font-size: 14px;
+    font-weight: 300;
+    height: 100%;
+    min-width: 188px;
     position: fixed;
-    // position: absolute;
-    // top: 0;
+    width: 10%;
 
     .nav-header {
         display: flex;
@@ -46,7 +45,7 @@ $padding-left: 20px;
             display: inline-block;
             
         }
-        .menu-toggle {
+        .hamburger {
             cursor: pointer;
             display: inline-block;
             &::before {
@@ -77,10 +76,13 @@ $padding-left: 20px;
             padding: 10px 0 10px 16px;
             display: block;
             border-left: 4px solid transparent;
+            span {
+                display: inline-block;
+            }
             i {
                 margin-right: 14px;
             }
-            &:hover {
+            &:hover,  &.active {
                 border-left: 4px solid #f58220;
                 background-color: #282828;
                 color: #ffffff;
@@ -97,6 +99,7 @@ $padding-left: 20px;
             line-height: 42px;
             margin: 0;
             text-transform: uppercase;
+            display: inline-block;
         }
         .avatar {
             display: flex;
@@ -105,6 +108,8 @@ $padding-left: 20px;
         .manager-image {
             display: inline-block;
             position: relative;
+            width: 43px;
+            height: 43px;
             img {
                 width: 100%;
             }
@@ -120,15 +125,23 @@ $padding-left: 20px;
             color: #56819f;
             line-height: 40px;
             margin-left: 14px;
+            display: inline;
         }
     }
+}
 
-    &.short-menu {
-        @include short-menu();
+.side-bar {
+    @include menu-expanded();
+
+    &.menu-collapsed {
+        @include menu-collapsed();
     }
     @media(max-width: 767px) {
-        &.mobile-default {
-            @include short-menu()
+        &.menu-sm-collapsed {
+            @include menu-collapsed();
+        }
+        &.menu-sm-expanded {
+            @include menu-expanded();
         }
       }
     

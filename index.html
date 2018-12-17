@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Just Do It</title>
+    <title>General</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
@@ -34,13 +34,13 @@
             </button>
         </nav>
     </header>
-    <nav class="side-bar mobile-default" id="side-bar">
+    <nav class="side-bar menu-sm-collapsed" id="side-bar">
         <div class="nav-header">
             <img class="logo" src="images/logo.png" alt="">
-            <span class="menu-toggle" id="menu-toggle"></span>
+            <span class="hamburger" id="hamburger"></span>
         </div>
         <ul class="nav-menu">
-            <li><a href="#"><i class="icon-general"></i> <span>General</span></a></li>
+            <li><a href="#" class="active"><i class="icon-general"></i> <span>General</span></a></li>
             <li><a href="#"><i class="icon-details"></i> <span>Details</span></a></li>
             <li><a href="#"><i class="icon-links"></i> <span>Links</span></a></li>
             <li><a href="#"><i class="icon-banners"></i> <span>Banners</span></a></li>
@@ -59,7 +59,8 @@
             </div>
         </div>
     </nav>
-    <main class="container">
+
+    <main class="container" id="main"
         <section class="section">
             <header class="page-header">
                 <h3 class="page-title">General statistic</h3>
@@ -73,8 +74,8 @@
                         </div>
                         <button class="btn btn-orange"><i class="icon-refresh"></i></button>
             </div>
-            <div class="page-content">
-                <div class="chart-area">
+            <div class="container-fluid">
+                <div class="row">
                     <img src="images/graph.png" alt="graph">
                 </div>
             </div>
@@ -84,66 +85,85 @@
                 <h3 class="page-title">Links</h3>
             </header>
             <div class="page-content">
-                <button class="btn btn-orange icon-positive"> add new</button>
-                <table class="container-fluid">
+                <button class="btn btn-orange" title="Add new link"><i>+</i> add new</button>
+                <table class="container-fluid table-with-links">
                     <tbody>
                         <tr class="row">
-                            <td class="col-md-5">Home page</td>
-                            <td class="col-md-5"><a href="http://www.homepage.com">http://www.homepage.com</a></td>
-                            <td class="col-md-1"><i class="icon-links"></i><i class="icon-trash"></i></td>
+                            <td class="col-md-5 col-sm-12">Home page</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.homepage.com">http://www.homepage.com</a></td>
+                            <td class="col-md-2 col-sm-12"><a href="http://"><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td class="col-md-5">Currently offer</td>
-                            <td class="col-md-5"><a href="http://www.currently.com">http://www.currently.com</a></td>
-                            <td class="col-md-2"></td>
+                            <td class="col-md-5 col-sm-12">Currently offer</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.currently.com">http://www.currently.com</a></td>
+                            <td class="col-md-2 col-sm-12"><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>BlurPix</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">BlurPix</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.blurpix.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Your site</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Your site</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.yoursite.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Google</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Google</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.google.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Facebook</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Facebook</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.facebook.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Dashboard</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Dashboard</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.dashboard.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Blurax</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Blurax</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://blurax.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Piece of wine</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Piece of wine</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.pieceofwine.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                         <tr class="row">
-                            <td>Twitter</td>
-                            <td><a href="http://www.com"></a></td>
-                            <td></td>
+                            <td class="col-md-5 col-sm-12">Twitter</td>
+                            <td class="col-md-5 col-sm-12"><a href="http://www.com">http://www.twitter.com</a></td>
+                            <td><a><i class="icon-links"></i></a> <i class="icon-trash" title="Delete link"></i></td>
                         </tr>
                     </tbody>
                 </table>
-                <button class="btn btn-orange icon-positive"> add new</button>
+                <button class="btn btn-orange" title="Add new link"><i>&#43;</i> add new</button>
             </div>
         </section>
+        <div class="modal hidden" id="login">
+            <div class="popup-dialog">
+                    <header class="popup-header">
+                        <button class="btn-close">&times;</button>
+                        <h4>Login</h4>
+                    </header>
+                    <div class="popup-body">
+                        <div class="input-group">
+                            <label class="input-icon icon-login" for="text"></label>
+                            <input class="form-input" type="text" name="" id="text" placeholder="login name">
+                            <label class="input-icon icon-password" for="password"></label>
+                            <input class="form-input" type="password" name="" id="password" placeholder="password">
+                            <button class="btn btn-orange">Enter</button>
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
     </main>
+
     <script src="js/script.js"></script>
 </body>
-
+    
 </html>
